@@ -38,7 +38,9 @@ enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
 
 [gui]
 
+theme/default_font_antialiasing=0
 theme/custom="uid://sn7rphs2juvi"
+theme/custom_font="uid://cnte6wmem5bo2"
 
 [input]
 
