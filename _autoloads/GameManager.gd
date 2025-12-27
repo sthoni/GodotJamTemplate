@@ -7,9 +7,19 @@ enum GameState {
 	GAME_OVER
 }
 
-var current_game_state: GameState = GameState.MAIN_MENU
+var GameScenes := {
+	GameState.MAIN_MENU: preload("res://ui/MainMenu.tscn")
+}
+
+var current_game_state: GameState
 
 signal game_state_changed(new_state: GameState)
+
+
+func _ready() -> void:
+	if get_tree().current_scene == GameScenes[GameState.MAIN_MENU]:
+		current_game_state = GameState.MAIN_MENU
+		game_state_changed.emit(current_game_state)
 
 
 func set_game_state(new_state: GameState) -> void:
