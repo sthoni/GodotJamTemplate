@@ -15,6 +15,4 @@ func _on_debug_message(message: String) -> void:
 	DebugLabel.text = message + "\n" + DebugLabel.text
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
-		GameManager.set_game_state(GameManager.GameState.PAUSED)
-		#TODO Physics Proces muss pausieren
+	pass

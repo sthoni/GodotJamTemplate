@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://3pacq544ybt0"]
+[gd_scene load_steps=2 format=3 uid="uid://3pacq544ybt0"]
+
+[ext_resource type="Script" uid="uid://boql8noqbv0g3" path="res://ui/pause_menu.gd" id="1_c7v6e"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
+script = ExtResource("1_c7v6e")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -36,10 +39,12 @@ text = "Pause"
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StartGame" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="ResumeButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="ExitGame" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Exit Game"
+text = "Quit Game"

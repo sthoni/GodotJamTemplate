@@ -1,11 +1,11 @@
 extends Node
 
-@onready var sfx_pool_1: AudioStreamPlayer = $SFXPool1
-@onready var sfx_pool_2: AudioStreamPlayer = $SFXPool2
-@onready var sfx_pool_3: AudioStreamPlayer = $SFXPool3
-@onready var sfx_pool_4: AudioStreamPlayer = $SFXPool4
-@onready var sfx_pool_5: AudioStreamPlayer = $SFXPool5
-@onready var sfx_pool: Array[AudioStreamPlayer] = [$SFXPool1, $SFXPool2, $SFXPool3, $SFXPool4, $SFXPool5]
+@onready var sfx_pool_1: AudioStreamPlayer = $SFXPool_1
+@onready var sfx_pool_2: AudioStreamPlayer = $SFXPool_2
+@onready var sfx_pool_3: AudioStreamPlayer = $SFXPool_3
+@onready var sfx_pool_4: AudioStreamPlayer = $SFXPool_4
+@onready var sfx_pool_5: AudioStreamPlayer = $SFXPool_5
+@onready var sfx_pool: Array[AudioStreamPlayer] = [$SFXPool_1, $SFXPool_2, $SFXPool_3, $SFXPool_4, $SFXPool_5]
 
 func play_sfx(stream: AudioStream, pitch_randomness: float) -> void:
 	var sfx_player: AudioStreamPlayer = sfx_pool.pick_random()

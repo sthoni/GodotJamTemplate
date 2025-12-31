@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c5kaix1e8owld"]
+[gd_scene load_steps=2 format=3 uid="uid://c5kaix1e8owld"]
+
+[ext_resource type="Script" uid="uid://dp8jeacwvtmh4" path="res://ui/main_menu.gd" id="1_b00nv"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b00nv")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -46,10 +49,12 @@ text = "Fail fast! Have fun!"
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StartGame" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="StartButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
-[node name="ExitGame" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Exit Game"
+text = "Quit Game"
